@@ -49,8 +49,8 @@ st.markdown(filedownload(df_selected_sector), unsafe_allow_html=True)
 
 data = yf.download(
         tickers = list(df_selected_sector[:10].Symbol),
-        period = "max", # 1d,5d,1mo,3mo,6mo,1yr,2yr,5yr,10yr,ytd,max; default is 10yr 
-        interval = "5m", # 1m, 2m,5m,15m,30m,60m,90m,1h,1d,5d,5d,1wk,1mo,3mo,
+        period = "10yr", # 1d,5d,1mo,3mo,6mo,1yr,2yr,5yr,10yr,ytd,max; default is 10yr 
+        interval = "1d", # 1m, 2m,5m,15m,30m,60m,90m,1h,1d,5d,5d,1wk,1mo,3mo,
         group_by = 'ticker', 
         auto_adjust = True, # adjust all OHLC automatically
         prepost = True, # Download pre/post market hours data
@@ -71,7 +71,7 @@ def price_plot(symbol):
   plt.ylabel('Closing Price', fontweight='bold')
   return st.pyplot()
 
-noCompaniesMax = 50
+noCompaniesMax = 5
 num_company = st.sidebar.slider('Number of Companies',1, noCompaniesMax)
 
 if st.button('Show Plots'):
