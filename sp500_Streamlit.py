@@ -1,9 +1,9 @@
 try: 
-    python -m -q install matplotlib
-    python -m -q install streamlit
-    python -m -q install pandas
-    python -m -q install numpy
-    python -m -q install yfinance
+    pip install matplotlib
+    pip install streamlit
+    pip install pandas
+    pip install numpy
+    pip install yfinance
 except Exception: 
        print("Could not download...\n")
 
