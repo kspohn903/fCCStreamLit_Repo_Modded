@@ -1,3 +1,12 @@
+try: 
+    python -m -q install matplotlib
+    python -m -q install streamlit
+    python -m -q install pandas
+    python -m -q install numpy
+    python -m -q install yfinance
+except Exception: 
+       print("Could not download...\n")
+
 import streamlit as st, pandas as pd, base64, numpy as np #, seaborn as sns
 import matplotlib.pyplot as plt, yfinance as yf
 st.title('S&P 500 App')
