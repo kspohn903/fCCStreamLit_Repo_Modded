@@ -1,4 +1,4 @@
-import streamlit as st, pandas as pd, base64, seaborn as sns, numpy as np
+import streamlit as st, pandas as pd, base64, numpy as np #, seaborn as sns
 import matplotlib.pyplot as plt, yfinance as yf
 st.title('S&P 500 App')
 st.markdown("""This app retrieves the list of the **S&P 500** (from Wikipedia) and its corresponding **stock closing price** (year-to-date)!
